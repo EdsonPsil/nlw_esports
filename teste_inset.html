@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade inset</title>
+    <style>
+        div {
+  background-color: yellow;
+  width: 150px;
+  height: 120px;
+  position: relative;
+}
+
+.exampleText {
+  /* writing-mode: sideways-rl; */
+  position: absolute;
+  z-index: -1;/*joga o elento pra traz*/
+  inset: 0px 0.10% 10px 10px;
+  margin: -9px;
+ 
+  background-image: linear-gradient(to left, red, green, blue);
+}
+
+    </style>
+</head>
+<body>
+    <h2>Propriedade inset</h2>
+    <div>
+        <span class="exampleText">Example text</span>
+      </div>
+      <br>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/inset">Saiba mais!</a>
+      
+
+</body>
+</html>

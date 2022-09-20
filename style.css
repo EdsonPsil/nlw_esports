@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background: #121214;
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    color: #ffffff; 
+       
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 32px 0px;
+    position: relative; 
+    text-align: center;
+    margin-top: 60px;
+    
+     
+}
+header img{
+    width: 130px;
+    height: 130px; 
+    border-radius: 50%; 
+    animation: avatar .3s 1s;
+        
+}
+h1{
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image:linear-gradient(90deg,#9572FC 0%, #12a572 50.52%,#E2D45C 100%);
+  color: transparent;
+  margin-top: 20px;
+}
+header::before{
+  content: "";
+  width: 139px;
+  height: 139px; 
+  inset: 0; 
+  border-radius: 50%;
+  position: absolute; 
+  background-image: linear-gradient(90deg, #9572FC 0%, #12a572 50.52%, #E2D45C 100%);
+  z-index: -1;
+  left: 18px;
+  top: -5px; 
+  animation: avatar .3s 1s; 
+  text-align: center;
+}
+main{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 32px;
+    margin-bottom: 24px; 
+     
+}
+section{
+  padding-top: 5px;
+  border-radius: 12px;
+  position: relative;
+  background-image:linear-gradient(90deg,#9572FC 0%, #12a572 50.52%,#E2D45C 100%);
+  }
+ /* O comando abaixo cria uma borda gradiente */
+  .border{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 8px;  
+  background-color: #2A2634;  
+ }
+ .text{
+     
+    line-height: 200%;/*  altura entre as linhas */ 
+  }
+  h2{
+    letter-spacing: 1.5px;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  p{
+    letter-spacing:1px;
+    color: #A1A1AA;
+ }
+   img{
+    border-radius: 8px;
+ }
+
+ .games-list{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    list-style: none;
+    gap: 24px;  
+ }
+  
+ .chanels-list{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    gap: 24px;  
+ }
+ .chanels-list img{
+  border-radius: 50%;
+ 
+ }
+ .sociais-list{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 10px 32px 32px 32px;
+    gap:24px
+ }
+ a{
+  opacity: 60%;
+  
+ }
+ul li img:hover,a:hover {
+  opacity: 100%;
+  transform: scale(1.1);
+  transition: transform .5s;
+ }
+ /* =====efeitos de animação===== */
+ @keyframes avatar{
+  0%{
+    opacity: 1;
+    transform: translateX(0px);
+
+  }
+  25%{
+    opacity: 1;
+    transform: translateX(30px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(-60px);
+  }
+  100%{
+
+    opacity: 1;
+    transform: translateX(0);
+  }
+ }
+
+
+  main section {
+    animation: cards .7s  ease-in-out backwards;
+    
+    
+  }
+ main section:nth-child(1){
+  animation-delay: 0s;
+ }
+ main section:nth-child(2){
+  animation-delay: .3s;
+ }
+ main section:nth-child(3){
+  animation-delay: .6s;
+ }
+
+ 
+ @keyframes cards{
+  from{
+    opacity: 0;
+    transform: translateY(50px);
+
+  }
+  to{
+
+    opacity: 1;
+    transform: translateY(0);
+  }
+ }
+/* ====Configuration desktop===== */
+
+.mob-1{width: 100%;}
+.mob-2{max-width: 580px;}
+.mob-3{width: 580px;}
+.mob-4 img{width: 90px;
+  height:120px}
+.mob-4{padding: 10px 32px 32px 32px;}
+.mob-5{padding: 10px 32px 32px 32px;}
+.mob-6{padding: 20px 0px 20px 32px;}
+.mob-7{}
+.mob-9{}
+.mob-10{}
+
+
+/* =====for mobile fome===== */
+ @media only screen and (max-width:600px){ 
+  .mob-1{
+    width: 100%;
+  }
+ .mob-2{ 
+   max-width: 360px;
+   
+}
+ .mob-3{ 
+   width: 360px; 
+}
+.mob-4 img{
+  width: 100%;
+  height: auto;
+}
+
+.mob-5 img{
+  width: 100%;
+  height: auto;
+}
+.mob-6 h2{
+ font-size: 20px;
+}
+.mob-6 p{
+ font-size: 13px;
+ letter-spacing: 0;
+ 
+}
+
+}  
+ @media only screen and (max-width:360px){ 
+  .mob-1{
+    width: 100%;
+  }
+ .mob-2{ 
+   max-width: 300px;
+   
+}
+ .mob-3{ 
+   width: 300px; 
+}
+.mob-4 img{
+  width: 130%;
+  height: auto;
+ 
+}
+.mob-4{
+  padding: 10px 32px 32px 15px;
+ 
+}
+.mob-5 {
+  padding: 10px 32px 32px 15px;
+}
+.mob-5 img{
+  width: 130%;
+  height: auto;
+}
+.mob-6{
+  padding: 20px 0px 20px 15px;
+}
+.mob-6 h2{
+ font-size: 20px;
+}
+.mob-6 p{
+ font-size: 12px;
+ letter-spacing: 0;
+ 
+}
+.mob-7{
+  padding: 10px 32px 32px 15px;
+}
+
+}  
