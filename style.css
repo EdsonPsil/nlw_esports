@@ -127,11 +127,11 @@ section{
     gap:24px
  }
  a{
-  opacity: 60%;
+  opacity: 100%;
   
  }
 ul li img:hover,a:hover {
-  opacity: 100%;
+  opacity: 70%;
   transform: scale(1.1);
   transition: transform .5s;
  }
